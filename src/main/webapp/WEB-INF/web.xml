@@ -15,7 +15,7 @@ https://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
     </context-param>
     <context-param>
     	<param-name>contextConfigLocation</param-name>
-    	<param-value>jp.tuyano.spring.websample1.MyBeanConfig</param-value>
+    	<param-value>jp.tuyano.spring.websample1.MyBeanConfig2</param-value>
     </context-param>
 
     <listener>

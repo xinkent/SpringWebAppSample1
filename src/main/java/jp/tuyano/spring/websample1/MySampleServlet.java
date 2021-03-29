@@ -19,7 +19,7 @@ public class MySampleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Autowired
-	private MyBean mybean1;
+	private MyBean2 mybean2;
 
 	@Override
 	public void init() throws ServletException {
@@ -28,13 +28,13 @@ public class MySampleServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("mybean", mybean1);
+		request.setAttribute("mybean", mybean2);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String message = request.getParameter("message");
-		mybean1.addMessage(message);
+		mybean2.getBean().addMessage(message);
 		response.sendRedirect("sample");
 	}
 
